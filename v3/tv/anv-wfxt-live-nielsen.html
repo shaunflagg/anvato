@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MyFoxBoston</title>
+</head>
+
+<body>
+
+
+<script>
+    var anvp = {};
+    anvp.p0 = {};
+    anvp.p0.config = {
+        accessKey: "anvato_cox_app_web_prod_ce45cda237969f93e7130f50ee8bb6280c1484ab",
+        mcp: "cox",
+        profile: "cox",
+        video: getParameterByName("v") || "wfxt",
+        revealBeacons: true,
+        plugins: {
+            
+			heartbeat: {
+                marketingCloudId: "146234B8527835E10A490D44@AdobeOrg",
+                customTrackingServer: "coxnet.112.2o7.net",
+                trackingServer: "coxnet.hb.omtrdc.net",
+                jobId: "j2",
+                account: "coxwfxttv,coxglobal",
+                publisherId: "coxnet",
+                version: "1.5"
+            },
+            dfp: {
+                clientSide: {
+                    adTagUrl: "https://pubads.g.doubleclick.net/gampad/ads?sz=400x300&iu=/12523293/Boston_TV/wfxt_web_default/pre_roll&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp"
+                    }
+                },
+			comscore: {
+                clientId: 6035944
+                                }, 
+			nielsen: {
+                environment: "production",
+				sfcode : "us",
+                apid : "PE8680517-C884-43BB-802B-6DE516DAC1E5",
+				apn: "wfxt-web",
+                nol_sdkDebug: "console",
+                type: "dtvr",
+                optOut: {location: "TL", sizeFactor:.3, margin: "20px", period: -1} // period set to -1 for testing
+                // which means opt-out notification will appear every time nielsen is initialized (default is Infinity)
+            }					
+		},
+        
+    };
+    anvp.listener = function(evt) {
+        console.log("Event: " + JSON.stringify(evt));
+    };
+    if (getParameterByName("vod") == 1) {
+        delete anvp.p0.config.accessKey;
+        delete anvp.p0.config.mcp;
+        delete anvp.p0.config.video;
+        anvp.p0.config.url = "http://www.nielseninternet.com/VOD/NielsenConsumer/prog_index.m3u8";
+    }
+
+    function getParameterByName(name, url) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regexS = "[\\?&]" + name + "=([^&#]*)";
+        var regex = new RegExp(regexS);
+        var results = regex.exec(url || window.location.search);
+        if (results == null)
+            return null;
+        else
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+</script>
+<div id="p0"></div>
+
+<script type="text/javascript" data-anvp='{"trackTimePeriod":10, "pInstance":"p0", "width":"100%", "height":"56.25%"}' src='//w3.cdn.anvato.net/player/prod/v3/scripts/anvload.js'></script>
+
+
+</body>
+</html>
