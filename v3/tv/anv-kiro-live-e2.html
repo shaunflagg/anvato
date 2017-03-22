@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>KIROE2</title>
+
+<script src="http://mediaweb.kirotv.com/video/plugins/js/anvato_strategy.js"></script>
+<script type='text/javascript'>
+        window['_cbv_strategies'] = window['_cbv_strategies'] || [];
+        window['_cbv_strategies'].push(AnvatoStrategy);
+</script>
+
+</head>
+
+<body>
+
+<div id="p0"></div>
+<script>
+    var anvp = {};
+    anvp.p0 = {};
+	
+	anvp.p0.onReady = function(playerInstance) {
+    var _cbv = window._cbv || (window._cbv = []);
+    _cbv.push(playerInstance);
+	};
+	
+    anvp.p0.config = {
+       	accessKey: "70X35QbVMo8XeCmPodcDC06YqYQk2R1w",
+		secretKey: "vG4Aj2BMnDLbGfB7KoCeSVPJpJ8lMOam",
+		autoplay: true,
+		volume: 0,
+        plugins: {
+            heartbeat: {
+                marketingCloudId: "146234B8527835E10A490D44@AdobeOrg",
+                customTrackingServer: "coxnet.112.2o7.net",
+                trackingServer: "coxnet.hb.omtrdc.net",
+                jobId: "j2",
+                account: "coxkirotv,coxglobal",
+                publisherId: "coxnet",
+                version: "1.5"
+            },
+            dfp: {
+                clientSide: {
+                     adTagUrl:  "https://pubads.g.doubleclick.net/gampad/ads?sz=400x300&iu=/12523293/Seattle_TV/kiro_web_default&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]"
+                    
+                    }
+                },
+			comscore: {
+                clientId: 6035944
+                                }, 
+            
+        },
+        profile: "cox"
+    };
+   
+</script>
+<script data-anvp='{"width":"100%", "height": "56.25%" ,"mcp":"anv", "video": "c382", "poster": "http://mediaweb.kirotv.com/video/images/kiro_live_poster.jpg", "pInstance":"p0"}' src="//w3.cdn.anvato.net/player/prod/v3/scripts/anvload.js"></script>
+
+<script src="http://mediaweb.kirotv.com/video/plugins/js/anv_kiro_chartbeat.js"></script>
+
+</body>
+</html>
