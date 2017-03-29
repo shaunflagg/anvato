@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>PBP Anvato Player</title>
+    <!-- Chartbeat header code -->
+    <script src="../../js/anvato_strategy.js"></script>
+	<script type='text/javascript'>
+        window['_cbv_strategies'] = window['_cbv_strategies'] || [];
+        window['_cbv_strategies'].push(AnvatoStrategy);
+	</script>
+
+</head>
+
+
+<body>
+<div id="p0"></div>
+<script>
+    var anvp = {};
+    anvp.p0 = {};
+	
+	anvp.p0.onReady = function(playerInstance) {
+    var _cbv = window._cbv || (window._cbv = []);
+    _cbv.push(playerInstance); 
+	}
+	
+    anvp.p0.config = {
+        accessKey: "q261XAmWqzwMKF1Jmac99cYr3g3yPmMB",
+		token: " ", 
+		autoplay: false,// boolean 
+		volume: 1, // volume 1, 0 or decimal e.g. 0.5
+		recom: true, //recommendation end slate boolean
+		
+        
+		plugins: {
+			
+            dfp: {
+                clientSide: {
+                    adTagUrl: "https://pubads.g.doubleclick.net/gampad/ads?sz=400x300&iu=/12523293/Palm_Beach_NP/pbp_web_default&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]"
+                }
+            }
+        },
+        profile: "cox"
+    };
+   
+
+</script>
+<script data-anvp='{"width":"100%", "height": "56.25%" ,"mcp":"anv", "video": "3933372", "pInstance":"p0"}' src="//w3.cdn.anvato.net/player/prod/v3/scripts/anvload.js"></script>
+
+ <!-- Chartbeat end code -->
+<script src="../../js/anv_pbp_chartbeat.js"></script>
+
+
+
+</body>
+</html>
+
+
